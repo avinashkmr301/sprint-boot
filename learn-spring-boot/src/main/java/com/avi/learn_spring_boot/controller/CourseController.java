@@ -20,7 +20,8 @@ public class CourseController {
                 new Course(1,"AWS","Munna"),
                 new Course(2,"Spring-boot","Munna"),
                 new Course(3,"Learn GCP","John"),
-                new Course(4,"Learn-Java","John")
+                new Course(4,"Learn-Java","John"),
+                new Course(5,"Learn-Hibernate","in28minute")
         );
     }
 }

@@ -38,3 +38,14 @@ run: mvn clean install
 cd /Users/avinashkumar/Desktop/Developer/sprint-boot/learn-spring-boot/target
 
 To run the jar file: java -jar learn-spring-boot-0.0.1-SNAPSHOT.jar
+
+
+======================
+
+Devtools:
+
+
+
+Actuator:
+
+management.endpoints.web.exposure.include=*
