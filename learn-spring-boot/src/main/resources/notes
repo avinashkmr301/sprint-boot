@@ -49,3 +49,10 @@ Devtools:
 Actuator:
 
 management.endpoints.web.exposure.include=*
+
+Context path:
+Add in aplication.properties:
+server.servlet.context-path=/api
+
+before: http://localhost:8080/courses
+after: http://localhost:8080/api/courses
