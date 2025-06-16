@@ -1,0 +1,16 @@
+Stub return value summary:
+
+Mockito(when<Mock obj>.<method call>).thenReturn(<value>);
+
+Mockito(when<Mock obj>.<method call>).thenReturn(<value1>,<value2>,<value3);
+
+Mockito(when<Mock obj>.<method call>).thenReturn(<value1>)
+                                     .thenReturn(<value2>)
+                                     .thenReturn(<value3>);
+
+
+Mockito(when<Mock obj>.<method call>).thenThrow(<Exception>);
+
+
+                                    =====================
+
