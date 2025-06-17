@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>My First HTML page</title>
+</head>
+<body>
+My First page with body...
+</body>
+</html>
+
+##JSP:
+--------
+src/main/resources/META-INF/resources/WEB-INF/jsp/sayHello.jsp
+WEB-INF/jsp/sayHello.jsp
+
+## Login JSP
+------------
+/login => com/avi/myFirstWebApp/controller/login/LoginController.java => login.jsp
+
+##
+localhost:8080/login
+
+B1: Identifies correct controller method
+/login => LoginController.java -> goToLoginPage()
+
+B2: Executes controller method
+=> Puts data into model
+=> Returns view name => login
+
+B3: Identifies correct view
+=> (added prefix and sufix in application.properties)
+=> /WEB-INF/jsp/login.jsp
+
+B4: Execute view
+=> Dispatcher servlet executes and will see in view.
