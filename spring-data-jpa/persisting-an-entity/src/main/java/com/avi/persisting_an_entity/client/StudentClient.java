@@ -15,7 +15,12 @@ public class StudentClient implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        Student student = new Student("Thanuja","THANU1234");
-        studentRepository.save(student);
+        //persisting a student
+        Student student = new Student("Thanuja","THANU1234"); // transient-state
+        Student returnedStudent = studentRepository.save(student);// persistent-state and once obj will get saved to DB => come to detached-state
+
+        //Updating a student
+        returnedStudent.setName("Thanuja P");
+        Student updatedStudent = studentRepository.save(returnedStudent);
     }
 }
