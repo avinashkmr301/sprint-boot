@@ -26,11 +26,21 @@ public class StudentClient implements ApplicationRunner {
         Student updatedStudent = studentRepository.save(returnedStudent);
 
         //findById
-        Optional<Student> studentOptional = studentRepository.findById(1L);
-        System.out.println(studentOptional.get());
+        Optional<Student> studentOptional = studentRepository.findById(1L); //em.find()
+        Student studentById = studentOptional.get();
+        System.out.println(studentById);
 
         //delete
         System.out.println("deleting...");
-        studentRepository.delete(studentOptional.get());
+        studentRepository.delete(studentOptional.get()); //em.find(Student.class, returnedStudent.getId()) then em.remove()
+
+        //existsById
+        boolean isFound = studentRepository.existsById(1L);
+        System.out.println(isFound);
+
+        //delete Student only if exists in database
+        if (isFound){
+            studentRepository.deleteById(1L);
+        }
     }
 }
