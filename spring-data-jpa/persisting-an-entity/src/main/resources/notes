@@ -1,0 +1,35 @@
+Spring Data Commons is a shared library used by all Spring Data projects (like Spring Data JPA, MongoDB, etc.). It provides core abstractions such as repositories, query execution, and mapping infrastructure.
+
+Maven dependency example:
+<dependency>
+    <groupId>org.springframework.data</groupId>
+    <artifactId>spring-data-commons</artifactId>
+    <version>3.2.5</version>
+</dependency>
+
+Key features:
+- Repository interfaces (CrudRepository, PagingAndSortingRepository)
+- Query method parsing (findBy, countBy, etc.)
+- Auditing support
+- Domain class mapping utilities
+
+Official docs: https://docs.spring.io/spring-data/commons/docs/current/reference/html/
+
+
+
+
+#Spring data commons:
+ Interface=>
+    Repository<T,ID>.-----------------> NO Method decleared    
+    CrudRepository<T,ID>.  -----------> Having CRUD method
+    PagingAndSortingRepository<T,ID>---> +findAll(Sort sort): Iterable<T>, 
+                                         +findAll(Pagable pagable): Page<T>
+
+#Spring data JPA
+ Interface=>
+    JpaRepository<T,ID> ----> flush():void
+                              saveAndFlush()
+
+
+
+
