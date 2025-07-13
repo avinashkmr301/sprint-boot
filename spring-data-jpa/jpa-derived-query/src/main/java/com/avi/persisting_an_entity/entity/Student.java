@@ -5,6 +5,10 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Entity
+/*@NamedQuery(name = "Student.findByName",
+            query = "select s from Student s where s.name = :name")
+@NamedNativeQuery(name = "Student.findByNameEndingWith",
+                  query = "select * from student where name like %?0")*/
 public class Student implements Serializable {
     private static final long serialVersionUID = 1L;
 
