@@ -57,5 +57,18 @@ class BasicDerivedQueriesApplicationTests {
 		assertEquals(3,byLevelIn.size());
 		System.out.println(byLevelIn);
 	}
+	@Test
+	void testFindByIsActiveTrue(){
+		List<User> isActiveTrue = userRepository.findByIsActiveTrue();
+		System.out.println(isActiveTrue);
+	}
+
+	@Test
+	void testFindByUsernameIsNotNull(){
+		List<User> byUsernameIsNotNull = userRepository.findByUsernameIsNotNull();
+		System.out.println(byUsernameIsNotNull);
+
+
+	}
 
 }

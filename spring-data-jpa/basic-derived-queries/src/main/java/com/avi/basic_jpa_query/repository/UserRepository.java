@@ -17,5 +17,22 @@ public interface UserRepository extends JpaRepository<User,Long> {
     List<User> findByLevelGreaterThanEqual(Integer level);
 
     List<User> findByUsernameStartingWith(String start);
-    List<User> findByUsernameEndingWith(Integer end);
+    List<User> findByUsernameEndingWith(String end);
+
+    List<User> findByUsernameContaining(String contains);
+    List<User> findByUsernameContainingIgnoreCase(String contains);
+
+    List<User> findByUsernameIsNull();
+    List<User> findByUsernameNull();
+    List<User> findByUsernameIsNotNull();
+    List<User> findByUsernameNotNull();
+
+    // both same
+    List<User> findByLevelIsNot(Integer level);
+    List<User> findByLevelNot(Integer level);
+
+    //True,False
+    List<User> findByIsActiveTrue();
+    List<User> findByIsActiveFalse();
+
 }
