@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -50,5 +51,10 @@ public class ExerciseTest1 {
         System.out.println(username.getUsername());
     }
 
-
+  /*  @Test
+    void testFindAllByOrderByLevelDesc(){
+        List<User> allByOrderByLevelDesc = userRepository.findAllByOrderByLevelDesc();
+        System.out.println(allByOrderByLevelDesc);
+    }*/
 }
+
